@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//Controller/Controller/DatHangController.java=UTF-8
+encoding//Controller/Controller/GioHangController.java=UTF-8
+encoding//Controller/Controller/KTDNController.java=UTF-8
+encoding//Controller/Controller/KTDangKyController.java=UTF-8
+encoding//Controller/Controller/KTDoimatkhauController.java=UTF-8
+encoding//Controller/Controller/LichSuDatHangController.java=UTF-8
+encoding//Controller/Controller/LogOutController.java=UTF-8
+encoding//Controller/Controller/XoaallGioHangController.java=UTF-8
+encoding//Controller/Controller/adminHomeSanphamController.java=UTF-8
+encoding//Controller/Controller/adminThemSPController.java=UTF-8
+encoding//Controller/Controller/homeController.java=UTF-8
+encoding//Model/dao/MD5.java=UTF-8
