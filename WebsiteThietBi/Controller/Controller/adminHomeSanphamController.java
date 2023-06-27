@@ -46,7 +46,7 @@ public class adminHomeSanphamController extends HttpServlet {
 			request.setAttribute("dssp", spbo.getSanPham());
 			request.setAttribute("dskh", khbo.getKhachHang());
 			request.setAttribute("sl", spbo.demSP());
-			RequestDispatcher rd = request.getRequestDispatcher("adminSanpham.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/adminSanpham.jsp");
 			rd.forward(request, response);
 			} catch (Exception e) {
 			// TODO: handle exception
@@ -56,7 +56,7 @@ public class adminHomeSanphamController extends HttpServlet {
 			try {
 				if(spbo.Tim(key).isEmpty()) {
 					request.setAttribute("mes", "Không tìm thấy sản phẩm!");
-					RequestDispatcher rd= request.getRequestDispatcher("adminSanpham.jsp");
+					RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/adminSanpham.jsp");
 					rd.forward(request, response);
 				}
 				else {
@@ -65,7 +65,7 @@ public class adminHomeSanphamController extends HttpServlet {
 					request.setAttribute("dskh", khbo.getKhachHang());
 					request.setAttribute("sl", spbo.demSP());
 					request.setAttribute("mes", "Đã tìm thấy!");
-					RequestDispatcher rd= request.getRequestDispatcher("adminSanpham.jsp");
+					RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/adminSanpham.jsp");
 					rd.forward(request, response);
 					}catch (Exception e) {
 						e.printStackTrace();

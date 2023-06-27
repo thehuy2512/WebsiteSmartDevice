@@ -35,7 +35,7 @@ public class LogOutController extends HttpServlet {
 		
 		request.getSession().invalidate();
 		// hàm invalidate làm mất hiệu lực của các session
-		RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/home.jsp");
 		rd.forward(request, response);
 	}
 

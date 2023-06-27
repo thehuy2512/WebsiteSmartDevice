@@ -115,16 +115,16 @@ public class adminThemSPController extends HttpServlet {
 		for(sanphambean s:spbo.getSanPham()) {
 			if(s.getMasp().equals(masp)) {
 				request.setAttribute("mess", "Mã sản phẩm bị trùng!");
-				RequestDispatcher rd= request.getRequestDispatcher("adminThemSP.jsp");
+				RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/adminThemSP.jsp");
 				rd.forward(request, response);
 			}
 		}
 		if(spbo.themSP(masp, tensp, gia, maloai, mathuonghieu, anh, trangthai)==false) {
 			request.setAttribute("mess", "Thêm không thành công!");
-			RequestDispatcher rd= request.getRequestDispatcher("adminThemSP.jsp");
+			RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/adminThemSP.jsp");
 			rd.forward(request, response);
 		}else {
-			RequestDispatcher rd= request.getRequestDispatcher("adminHomeSanphamController");
+			RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/adminHomeSanphamController");
 			rd.forward(request, response);
 		}
 		
@@ -139,7 +139,7 @@ public class adminThemSPController extends HttpServlet {
 				request.setAttribute("dsloai", lbo.getLoai());
 				request.setAttribute("dsthuonghieu", thbo.getThuonghieu());
 				//request.setAttribute("dssp", spbo.getSanPham());
-				RequestDispatcher rd= request.getRequestDispatcher("adminThemSP.jsp");
+				RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/adminThemSP.jsp");
 				rd.forward(request, response);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block

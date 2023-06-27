@@ -53,7 +53,7 @@ public class KTDNController extends HttpServlet {
 	    	session.setAttribute("kh", null);
 	    	session.setAttribute("ad",null);
 	    	request.setAttribute("mess", "Đăng nhập không thành công!");
-	    	RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+	    	RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/Login.jsp");
 			rd.forward(request, response);
 	    }
 	    else {

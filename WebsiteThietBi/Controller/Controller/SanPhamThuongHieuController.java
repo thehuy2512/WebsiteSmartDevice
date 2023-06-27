@@ -44,7 +44,7 @@ public class SanPhamThuongHieuController extends HttpServlet {
 		    ArrayList<sanphambean> dssp = spbo.getSanPhamtheothuonghieu(tamloai,tamthuonghieu);
 		    request.setAttribute("dssp", dssp);
 		    
-		    RequestDispatcher rd= request.getRequestDispatcher(tamtrang+".jsp");
+		    RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/"+tamtrang+".jsp");
 			rd.forward(request, response);
 		} catch (Exception e) {
 			// TODO: handle exception

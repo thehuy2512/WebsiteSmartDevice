@@ -56,29 +56,29 @@ public class KTDoimatkhauController extends HttpServlet {
 		    		if(tammd5.equals(tammd51))
 		    		{
 		    			request.setAttribute("mess", "Trùng mật khẩu cũ hay thay đổi để bảo mật hơn!");
-			    		RequestDispatcher rd = request.getRequestDispatcher("ChangePassword.jsp");
+			    		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChangePassword.jsp");
 			    		rd.forward(request, response);
 		    		}
 		    		else {
 			    		if(khbo.doimatkhau(tamuser, tammd51)==true) {
 			    			request.setAttribute("mess", "Đổi mật khẩu thành công!");
-				    		RequestDispatcher rd = request.getRequestDispatcher("ChangePassword.jsp");
+				    		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChangePassword.jsp");
 				    		rd.forward(request, response);
 			    		}else{
 			    			request.setAttribute("mess", "lỗi DAO!");
-				    		RequestDispatcher rd = request.getRequestDispatcher("ChangePassword.jsp");
+				    		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChangePassword.jsp");
 				    		rd.forward(request, response);
 			    		}
 		    		}
 		    	}
 		    	else {
 		    		request.setAttribute("mess", "Xác nhận mật khẩu không khớp!");
-		    		RequestDispatcher rd = request.getRequestDispatcher("ChangePassword.jsp");
+		    		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChangePassword.jsp");
 		    		rd.forward(request, response);
 		    	}
 		    }else {
 		    	request.setAttribute("mess", "Tài khoản không đúng!");
-	    		RequestDispatcher rd = request.getRequestDispatcher("ChangePassword.jsp");
+	    		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChangePassword.jsp");
 	    		rd.forward(request, response);
 		    }
 		    

@@ -47,25 +47,25 @@ public class KTDangKyController extends HttpServlet {
 		    String tamconfirmpassword = request.getParameter("txtconfirmpassword");
 		    if(khbo.KTDangKy(tamusername)!=null) {
 		    	request.setAttribute("mess", "Username đã tồn tại!");
-		    	RequestDispatcher rd = request.getRequestDispatcher("Register.jsp");
+		    	RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/Register.jsp");
 		    	rd.forward(request, response);
 		    }
 		    else {
 		    	if(!tampassword.equals(tamconfirmpassword)) {
 		    		request.setAttribute("mess", "Password không khớp!");
-			    	RequestDispatcher rd = request.getRequestDispatcher("Register.jsp");
+			    	RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/Register.jsp");
 			    	rd.forward(request, response);
 		    	}
 		    	else {
 		    		String tammd5 = MD5.encryptMD5(tampassword);
 		    		if (khbo.themuser(tamname, tamdiachi, tamsdt,tamusername, tammd5)==false) {
 		    			request.setAttribute("mess", "Thêm không được lỗi DAO!");
-				    	RequestDispatcher rd = request.getRequestDispatcher("Register.jsp");
+				    	RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/Register.jsp");
 				    	rd.forward(request, response);
 		    		}
 		    		else {
 		    			//request.setAttribute("mes", "!");
-				    	RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+				    	RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/Login.jsp");
 				    	rd.forward(request, response);
 		    		}
 		    	}

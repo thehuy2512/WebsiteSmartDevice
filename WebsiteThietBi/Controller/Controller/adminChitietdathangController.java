@@ -45,7 +45,7 @@ public class adminChitietdathangController extends HttpServlet {
 				ArrayList<viewCTHDClient> vhd = vct.getCTHD(tammahd);
 				request.setAttribute("dscthd", vhd);
 				request.setAttribute("mahd", tammahd);
-				RequestDispatcher rd = request.getRequestDispatcher("adminChitiet.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/adminChitiet.jsp");
 				rd.forward(request, response);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

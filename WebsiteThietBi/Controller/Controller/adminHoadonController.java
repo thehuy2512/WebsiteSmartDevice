@@ -49,7 +49,7 @@ public class adminHoadonController extends HttpServlet {
 				e.printStackTrace();
 			}
 			
-			RequestDispatcher rd = request.getRequestDispatcher("adminHoadon.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/adminHoadon.jsp");
 			rd.forward(request, response);
 		}
 	}

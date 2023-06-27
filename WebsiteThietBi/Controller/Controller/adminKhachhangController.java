@@ -42,7 +42,7 @@ public class adminKhachhangController extends HttpServlet {
 			request.setAttribute("dskh", khbo.getKhachHang());
 			request.setAttribute("sl", khbo.demSLKH());
 			System.out.println(khbo.demSLKH());
-			RequestDispatcher rd = request.getRequestDispatcher("adminKhachhang.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/adminKhachhang.jsp");
 			rd.forward(request, response);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

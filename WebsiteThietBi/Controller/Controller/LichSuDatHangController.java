@@ -46,7 +46,7 @@ public class LichSuDatHangController extends HttpServlet {
 			try {
 				hoadon= hdbo.getHoadon(kh.getMakh());
 				session.setAttribute("hd", hoadon);
-				RequestDispatcher rd = request.getRequestDispatcher("LichSuDatHang.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/LichSuDatHang.jsp");
 				rd.forward(request, response);
 				
 			} catch (Exception e) {
@@ -57,7 +57,7 @@ public class LichSuDatHangController extends HttpServlet {
 		}
 		else {
 			request.setAttribute("mess", "Hãy đăng nhập để xem lịch sử đặt hàng!");
-			RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/Login.jsp");
 			rd.forward(request, response);
 		}
 	}

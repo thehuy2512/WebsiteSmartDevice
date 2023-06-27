@@ -40,7 +40,7 @@ public class adminXacnhandathangController extends HttpServlet {
 			hoadonbo hdbo = new hoadonbo();
 			try {
 				hdbo.xacnhanHD(tammahd);
-				RequestDispatcher rd= request.getRequestDispatcher("adminHoadonController");
+				RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/adminHoadonController");
 				rd.forward(request, response);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

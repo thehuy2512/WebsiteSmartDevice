@@ -42,13 +42,13 @@ public class homeController extends HttpServlet {
 		    	//ArrayList<sanphambean> dssp1 = spbo.Tim(key);
 		    	if(spbo.Tim(key).isEmpty()) {
 		    		request.setAttribute("mes", "Không tìm thấy sản phẩm!");
-		    		RequestDispatcher rd= request.getRequestDispatcher("home.jsp");
+		    		RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/home.jsp");
 					rd.forward(request, response);
 		    	}
 		    	else {
 		    		request.setAttribute("dssp", spbo.Tim(key));
 		    		request.setAttribute("mes", "Đã tìm thấy!");
-		    		RequestDispatcher rd= request.getRequestDispatcher("home.jsp");
+		    		RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/home.jsp");
 					rd.forward(request, response);
 		    	}
 		    }else {
@@ -56,7 +56,7 @@ public class homeController extends HttpServlet {
 		    ArrayList<sanphambean> dssp = spbo.getSanPham();
 		    request.setAttribute("dssp", dssp);
 		    
-		    RequestDispatcher rd= request.getRequestDispatcher("home.jsp");
+		    RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/home.jsp");
 			rd.forward(request, response);
 		    }
 		} catch (Exception e) {
